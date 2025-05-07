@@ -85,7 +85,7 @@ exports.login = async (req, res, next) => {
     }
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
-    res.status(200).json({userId: user._id, success: true, token });
+    res.status(200).json({success: true, token });
 
   } catch (err) {
     console.error(err);
